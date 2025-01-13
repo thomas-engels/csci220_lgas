@@ -1,8 +1,7 @@
 # 2706 Learning Group Assignment Repository
-*A place for all group member to store and share code from the LGAs*
+*A place for all group members to store and share code from the LGAs*
 
-## Directions
+## Directions/Context
 1) Create branch from the main branch and name it after yourself; e.g., tommy
-2) Add your code to the proper directory corresponding to the LGA date.
-3) After confirming the answers in class, we'll merge our answers to the main branch.
-4) Repeat the above steps for each LGA.
+2) All your work will be done on your branch. Optionally can pull in code from other people's branches.
+3) Main branch will always contain the answers released from the professors.
