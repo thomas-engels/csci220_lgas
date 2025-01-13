@@ -18,11 +18,6 @@ class holds5
     {
       return storage_array[index];
     }
-
-    //big 3
-    foo<T>& operator=(foo<T>& rhs)
-    {
-    }
 };
 
 void holds5_test()
