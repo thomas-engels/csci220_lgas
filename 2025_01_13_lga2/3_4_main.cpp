@@ -3,7 +3,7 @@
 struct foo
 {
  int age = 21;
-}
+};
 
 template <typename T>
 void print_five(T t)
@@ -18,6 +18,11 @@ int main()
 {
   foo foo1;
   print_five(5);
-  print_five(foo1);
+  print_five("Hello");
+  print_five("World");
+
+  // compile error because no expected print behavior for foo
+  //print_five(foo1);
+
   return 0;
 }
