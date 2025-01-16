@@ -62,7 +62,7 @@ double mean(const int *my_arr, const int size) {
         }
         return mean;
     }
-    std::cout << "No mean!" << std::endl;
+    std::cout << "No mean! Empty array!" << std::endl;
     return 0.0;
 }
 
