@@ -25,7 +25,7 @@ While n does not equal 1,
     Continue in the while loop.
 n must equal 1.
 End While loop.
-Display an endline character to the user.
+Display an end line character to the user.
 Function is terminated.
  */
 
@@ -36,18 +36,24 @@ Function is terminated.
 //-------------Question 3-------------//
 
 
-double hw_mean(int * my_arr, int size) {
-    int mean = 0;
-    int count = 0;
+float hw_mean(float * my_arr, int size) {
+    float mean = 0;
+    float count = 0;
     for (int i = 0; i < size; i++) {
-        int sum = (mean * count) + my_arr[i]; // this doesn't make sense
+        // std::cout << "Mean: " << mean << " ";
+        // std::cout << "Count: " << count << " ";
+        // std::cout << "Sum: " << sum << std::endl;
+        const float sum = (mean * count) + my_arr[i]; // this doesn't make sense
         count += 1; // count should be incremented at the end of the for loop
         mean = sum / count;
+        std::cout << "Mean: " << mean << " ";
+        std::cout << "Count: " << count << " ";
+        std::cout << "Sum: " << sum << std::endl;
     }
     return mean;
 }
 
-double mean(const int *my_arr, const int size) {
+double tommy_mean(const int *my_arr, const int size) {
     if (size >= 1) {
         int mean = my_arr[0];
         int count = 1;
@@ -71,9 +77,9 @@ int main()
 {
   int size = 3;
   double my_mean = 0;
-  int arr[] {5,10,15};
-  my_mean = mean(arr, size);
-    cout << "Tommy's mean: " << my_mean << endl;
+  float arr[] {5,10,15};
+  // my_mean = tommy_mean(arr, size);
+  //   cout << "Tommy's mean: " << my_mean << endl;
     my_mean = hw_mean(arr, size);
     cout << "HW mean: " << my_mean << endl;
   return 0;
