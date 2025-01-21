@@ -1,0 +1,65 @@
+Individual Questions:
+
+1) “FIFO” stands for $$$"First-In-First-Out"$$$ and describes the $$$Queue$$$ ADT.
+2) “LIFO” stands for $$$"Last-In-First-Out"$$$ and describes the $$$Stack$$$ ADT.
+3) The three principle operations on a stack are $$$is_empty, push, pop$$$. These operations allow interaction only with the pointer of the stack.
+4) The three principle operations on a queue are: $$$Enqueue, Dequeue, Top or is_empty$$$ Which at the end of the queue does each operation affect.
+Enqueue affects the tail-end, while dequeue affects the head-end.
+
+
+Group Questions
+2)
+
+Intermediate) You are given a large box. Inside the box is another, smaller box; inside that box is a
+yet smaller box; and so forth. There are n boxes in total. Each box is labeled with a unique label.
+Your job is to separate out all the boxes. Another worker is waiting to take each box as soon as you
+open it and remove its contents; you only have time enough to quickly record the label on the box
+before it is taken away. You are only able to use a stack data structure for recording the labels. Your
+co-worker moves all of the boxes to a new location.
+
+// Push each label onto the stack; largest box label will be on the bottom, smallest box label will be on the top.
+// Initialize stack_box <- Empty Stack
+// For box in Boxes
+//     stack_box.push(box)
+// End For
+
+
+The next day, your job is to put all of the boxes back as they were - smaller into larger. However, your
+boss is a real stickler for efficiency, and will only let you place a smaller box into a larger box a total
+of n − 1 times - which means you cannot make any mistakes. Unfortunately, many of the boxes are
+similar in size, there are a lot of boxes, and your careless co-worker scattered the boxes around any
+which way. Good thing you have your stack!
+
+Describe your algorithm for repacking all of the boxes.
+Create new temporary stack.
+While stack_box is not empty
+    Get the first label (smallest box) using the top operation.
+    Push the first label (smallest box) onto the temporary empty stack.
+    Pop stack_box.
+End While
+Your new stack should have the largest label on top, followed
+While temporary stack is not empty
+    Get the first label (i-th largest box) using the top operation.
+    Locate the i-th largest box
+    Put the i-th largest box on the ground or inside the box already there if beyond the first iteration.
+    Pop the stack.
+All boxes should be stacked from smallest to largest, all contained in the largest box.
+
+
+
+3. (Intermediate) Same problem, but you are given a queue instead of a stack.
+// Initialize an empty queue
+// Enqueue each label into the queue.
+// The queue's tail will be a label to the smallest box while the queue's head will be the label to the largest box.
+// For putting the box's back together, simply dequeue the queue. Locate the largest box and repeat, inserting each box into the previous laid down box.
+
+
+
+4. (Intermediate) A palindrome is a string that reads the same forward and backward, such as “kayak”,
+“civic”, or “racecar”. Describe one way you can use a stack and a queue together to determine if a
+given string is a palindrome.
+
+//
+
+
+
