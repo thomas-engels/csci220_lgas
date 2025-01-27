@@ -4,20 +4,21 @@ For each item, indicate whether it is a constant time operation or not.
 • constant : calling a function with signature void fn()
 • non-constant : addition (concatenation) of two string values
 • constant : assignment of a float value
-• not constant : squaring an int ????????
+• constant : squaring an int because know the exponent
 • non-constant : accessing the nth node in a linked list
 • constant : Comparing two integers to see which is larger
 • constant : dereferencing a pointer
 • not constant : raising an int to power k
 • constant: multiplication of two double values
-• constant: printing the integer value n of arbitrary size in base 10
+• non-constant: printing the integer value n of arbitrary size in base 10
+    log based 10 of the integer value
 
 
 2. Rank the following functions (from 1 to 8) in ascending order of their growth rates.
 n^4/3 : 6
-√n log n : 5
-2^n : 4
-n^2 : 7
+√n log n : 4
+2^n : 7
+n^2 : 6
 1 : 1
 log n : 2
 n! : 8

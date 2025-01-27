@@ -26,7 +26,7 @@ void print_powers(int n) { // O(1)
         cout << endl;
     }
 }
-
+// O(25)
 // O(1)
 
 
@@ -34,7 +34,7 @@ void aesop(unsigned int n) {
     unsigned tortoise = 0;
     unsigned hare = 0;
     int loop_counter = 0;
-    while (tortoise < n && hare < n) { // n
+    while (tortoise < n && hare < n) { // 2n -> O(n)
         std::cout << loop_counter << "\t";
         if (tortoise > hare) { // O(1
             hare += (n - tortoise) / 2; // (n - 1 / 2)
@@ -73,8 +73,10 @@ void insertionSort(std::vector<int>& arr) {
     std::cout << outer_loop_counter << endl;
 }
 
-void printArray(const std::vector<int>& arr) {
-    for (int num : arr) {
+void printArray(const std::vector<int>& arr)
+{
+    for (int num : arr)
+    {
         std::cout << num << " ";
     }
     std::cout << std::endl;
