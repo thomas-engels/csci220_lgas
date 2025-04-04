@@ -1,0 +1,51 @@
+int height(node * tree)
+{
+    int height = 0;
+    if (tree == nullptr):
+        return 0;
+    else:
+        height += 1;
+
+    int left_tree = height(tree->left);
+    int right_right = height(tree->right)
+    if (left_tree >= right_tree):
+        return height + left_tree;
+    else:
+        return height + right_tree;
+}
+
+
+int node_count(node * tree)
+{
+    if tree is null, then return 0.
+
+    int left_tree_node_count = node_count(tree->left).
+    int right_tree_node_count = node_count(tree->right).
+    return 1 + left_tree_node_count + right_tree_node_count.
+}
+
+int leaf(node * tree)
+{
+    if (tree == nullptr) return 1;
+
+    return leaf(tree->left) + leaf(tree->right)
+}
+
+
+
+bool id(node * a_tree, node * b_tree)
+{
+    if (a_tree.data != b_tree.data) return false;
+
+    if (a_tree == nullptr && b_tree == nullptr) return true;
+
+    return id(a_tree->left, b_tree->left) && id(a_tree->right, b_tree->right);
+}
+
+
+bool found(node * tree, int x)
+{
+    if (tree == nullptr) return false;
+    if (tree.data == x) return true;
+    return (find(tree->left, x) || find(tree->right, x));
+}
